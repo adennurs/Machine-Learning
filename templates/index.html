@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<!-- <p style="background-image: url('img_girl.jpg');"></p> -->
+<body style='background-image:url(https://raw.githubusercontent.com/raviprakash11/MusicRecommendationSystem/master/image/music3.jpg)'>
+   <!-- background-repeat: no-repeat; -->
+ <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ url_for('about') }}">About</a>
+      <!-- <form action="{{ url_for('about') }}"> -->
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home Page</a></li>
+        <li><a href="#"></a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li><a href="tableOFContent.html">Table Of Content  <i class="fa fa-user-plus"></i></a></li> -->
+        <!-- <li><a href="#about">Login  <i class="fa fa-user"></i></a></li> -->
+      </ul>
+    </div>
+  </div>
+ </nav>
+ <div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="content">
+        <h1>Music System</h1>
+        <h3>Intelligence Where You Get Your Next Music.</h3>
+        <hr>
+     </div>
+    </div>
+  </div>
+</div>
+ <div class="music">
+  <form action="{{ url_for('main') }}" method="POST">
+      <input type="text" id="music_name" name="music_name" placeholder="Enter a full music name" autocorrect="off" text-transform: none >
+      <input type="submit" id="submission_button" value="Submit" text-transform: none/>
+      <input type="reset" id="submission_button1" value="Reset" text-transform: none/>
+  </form>
+</div>
+ <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+ <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+ <style>
+ 
+ body {
+    /* background: url(https://images.unsplash.com/photo-1415369629372-26f2fe60c467); */
+    background-image: 'ravipic.jpg';
+    background-size: cover;
+    background-position: center;
+}
+
+/* body, */
+h1{
+    width: 100%;
+    height: 100%;
+    font-family: "Lato";
+    color: white;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 5em;
+}
+h3{
+  color:white;
+}
+
+.content{
+	margin-top: 5%;
+  margin-left: -5%;
+	text-align: center;
+    text-shadow: 0px 4px 3px rgb(248, 248, 248),
+                 0px 8px 13px rgb(246, 242, 242),
+                 0px 18px 23px rgb(251, 247, 247);
+}
+
+hr {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgb(234, 228, 228);
+}
+  html {
+    box-sizing: border-box;
+    height: 100vh;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    background-repeat: no-repeat;
+    background-size:100%;
+    
+    /* background
+    : 
+url("https://media.geeksforgeeks.org/wp-content/uploads/gfgbg.png"); */
+                /* background-size: 800px 200px; */
+    margin-top: 15vh;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    line-height: 1.5;
+    /* color: #000; */
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 8px;
+  }
+  @media (min-width: 32rem) {
+    body {
+      font-size: 102.5%;
+    }
+      .music{
+      margin-right: 25vh;
+      margin-left: 25vh;
+    }
+  }
+  @media (min-width: 54rem) {
+    body {
+      font-size: 105%;
+    }
+  }
+  @media (min-width: 65rem) {
+    body {
+      font-size: 107.5%;
+    }
+  }
+  @media (min-width: 75em) {
+    body {
+      font-size: 110%;
+    }
+  }
+  @media (min-width: 91rem) {
+    body {
+      font-size: 115%;
+    }
+  }
+  @media (min-width: 115rem) {
+    body {
+      font-size: 120%;
+    }
+  }
+  @media (min-width: 130rem) {
+    body {
+      font-size: 125%;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  .music{
+      display: block;
+      text-align: center;
+  }
+  #music_name{
+      width: 70%;
+      font-size:20px;
+      padding: 1em;
+      border-radius: 25px;
+      text-align: center;
+      border: 1px solid grey;
+      text-transform: none;
+      margin-left:40px;
+      
+      /* margin-top: 180px; */
+  }
+  #music_name.input[type=submit] {
+  text-transform: none;
+}
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  font-size:20px;
+  opacity: 1; /* Firefox */
+}
+#submission_button1{
+      width: 25%;
+      font-size:15px;
+      padding: 1em;
+      margin: 1em;
+      border-radius: 5px;
+      color: black;
+      background-color:rgb(25, 139, 253);
+      border-style: none;
+      margin-top: 7px;
+      margin-left: 127px;
+  }
+  #submission_button{
+      width: 25%;
+      font-size:15px;
+      padding: 1em;
+      margin: 1em;
+      border-radius: 5px;
+      color: black;
+      background-color:rgb(25, 139, 253);
+      border-style: none;
+  }
+  @media screen and (max-width:600px) {
+      .music{
+          padding-top: 11vh;
+          padding-bottom: 11vh;
+      }
+  }
+  h2{
+    text-align: center;
+  }
+  .creds{
+    margin-left: 26vh;
+    margin-top: 1vh;
+  }
+  </style>
+</body>
+</html>
